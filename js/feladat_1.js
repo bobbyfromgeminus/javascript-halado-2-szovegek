@@ -28,13 +28,15 @@ const jackDoe = {
 }
 */
 
-function mergeObj(...obj) {
-    const newObject = {};
-    for (let i = 0; i < obj.length; i +=1) {
-        newObject[i] = obj[i];
-    }
-    return newObject;
-}
+// function mergeObj(...obj) {
+//     const newObject = {};
+//     for (let i = 0; i < obj.length; i +=1) {
+//         newObject[i] = obj[i];
+//     }
+//     return newObject;
+// }
+
+const mergeObj = (...obj) => ({...obj});
 
 console.log(mergeObj(johnDoe));
 console.log(mergeObj(johnDoe, janeDoe));
